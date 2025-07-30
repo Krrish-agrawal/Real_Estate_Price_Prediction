@@ -22,9 +22,14 @@ https://real-estate-price-prediction-0ocn.onrender.com
 ### Screenshots
 
 #### Price Prediction Interface  
-![Price Prediction Screenshot](images/price Yield Calculator  
-![Rental Yield Screenshot](images/rental Estimator  
-![Mortgage Estimator Screenshot Features
+![Price Prediction Screenshot](images/price_prediction.png)
+
+#### Rental Yield Calculator  
+![Rental Yield Screenshot](images/rental_yield.png)
+
+#### Mortgage Estimator  
+![Mortgage Estimator Screenshot](images/mortgage.png)
+
 
 - Predict property sale prices based on location, size, and amenities  
 - Calculate expected rental yield for investment analysis  
