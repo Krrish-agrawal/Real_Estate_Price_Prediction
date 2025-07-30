@@ -1,0 +1,234 @@
+/* Prediction page styles */
+
+:root {
+  --bg-primary: #1e1e2f;
+  --bg-secondary: #2c2c3c;
+  --text-primary: #fff;
+  --text-secondary: #f39c12;
+}
+
+:root[data-theme="dark"] {
+  --bg-primary: #1e1e2f;
+  --bg-secondary: #2c2c3c;
+  --text-primary: #ffffff;
+  --text-secondary: #f39c12;
+  --text-muted: #a0aec0;
+  --input-bg: #2c2c3c;
+  --input-border: #555;
+  --input-text: #ffffff;
+  --text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  --bg-primary-rgb: 30, 30, 47;
+}
+
+:root[data-theme="light"] {
+  --bg-primary: #f0f2f5;
+  --bg-secondary: #ffffff;
+  --text-primary: #2d3748;
+  --text-secondary: #d35400;
+  --text-muted: #4a5568;
+  --input-bg: #ffffff;
+  --input-border: #e2e8f0;
+  --input-text: #2d3748;
+  --text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  --bg-primary-rgb: 240, 242, 245;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin: 10px 0;
+  color: var(--text-secondary);
+  text-shadow: var(--text-shadow);
+}
+
+h2 {
+  font-size: 14px;
+  margin: 5px 0;
+  color: var(--text-primary);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - 64px); /* Adjust based on navbar height */
+  padding: 10px;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.form-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  height: auto;
+}
+
+.form {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  padding: 10px;
+  width: 100%;
+  gap: 0.4rem;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.area, .location {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  font-size: 16px;
+  color: var(--input-text);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.area:focus, .location:focus {
+  border-color: #f39c12;
+}
+
+.submit {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  background: #f39c12;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  padding: 12px;
+  color: white;
+}
+
+.submit:hover {
+  background: #d35400;
+}
+
+.result {
+  width: 100%;
+  padding: 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--input-border);
+  border-radius: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  color: var(--text-secondary);
+  margin-top: 10px;
+}
+
+.switch-field {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-bottom: 12px;
+  flex-wrap: nowrap;  /* Prevent wrapping */
+}
+
+.switch-field input {
+  position: absolute;
+  opacity: 0;
+  width: 0; height: 0;
+}
+
+.switch-field label {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-primary);
+  padding: 6px 8px;  /* Reduced padding */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  flex: 1;
+  min-width: 40px;  /* Reduced min-width */
+  text-align: center;
+  font-size: 14px;  /* Slightly smaller font */
+}
+
+.switch-field label:hover,
+.switch-field input:checked + label {
+  background: #f39c12;
+  border-color: #f39c12;
+  color: #fff;
+}
+
+label {
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.emi-amount {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text-secondary);
+  margin: 10px 0;
+}
+
+.emi-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .container {
+    padding-top: 40px;
+  }
+  
+  .form-container {
+    width: 95%;
+    max-width: 400px;
+  }
+
+  .switch-field {
+    gap: 5px;
+  }
+
+  .switch-field label {
+    padding: 6px 4px;
+    min-width: 30px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-top: 30px;
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .form {
+    padding: 10px;
+  }
+
+  .area, .location {
+    margin-bottom: 10px;
+  }
+}
+
