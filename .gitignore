@@ -43,7 +43,7 @@ coverage.xml
 
 # Data files
 *.csv
-*.json
+
 *.xlsx
 *.xls
 !requirements.txt
