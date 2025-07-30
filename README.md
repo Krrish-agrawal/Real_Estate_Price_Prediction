@@ -31,11 +31,11 @@ https://real-estate-price-prediction-0ocn.onrender.com
 ![Mortgage Estimator Screenshot](images/mortgage.png)
 
 
-- Predict property sale prices based on location, size, and amenities  
+- Predict property sale prices based on location, size, and area
 - Calculate expected rental yield for investment analysis  
 - Estimate mortgage EMI based on principal, interest rate, and tenure  
 - Responsive UI with real-time validations  
-- Secure REST API for model inference  
+
 
 ## Architecture
 
@@ -71,9 +71,7 @@ The application follows a **client–server** model:
    Create a `.env` file in the `server` directory:
    ```env
    PORT=5000
-   DATABASE_URL=postgres://user:password@localhost:5432/realestate
-   MODEL_PATH=./model/bengaluru_house_price_model.pkl
-   ```
+  
 
 3. **Build & Start with Docker Compose**  
    ```bash
