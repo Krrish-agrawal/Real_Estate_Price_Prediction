@@ -12,7 +12,7 @@ export default function About() {
             Our Bangalore House Price Prediction platform empowers buyers, sellers, and investors 
             to make data-driven decisions in the real estate market. Using advanced machine 
             learning algorithms, we analyze various factors including location, size, and area 
-            to provide accurate price estimates for properties across Bangalore.
+            to provide accurate price estimates for properties across Bangalore. Developed by: Krrish Agrawal
           </p>
         </section>
 
